@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="icon.png" type="image/png"> <!-- Add your Favicon here -->
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -101,6 +102,46 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    /* Side menu styles */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 250px;
+      height: 100%;
+      background-color: #1e293b; /* Solid background color */
+      transition: right 0.3s ease;
+      z-index: 1000;
+      padding: 2rem 1rem;
+    }
+
+    .side-menu.open {
+      right: 0;
+    }
+
+    .side-menu ul {
+      list-style-type: none;
+    }
+
+    .side-menu ul li {
+      background-color: #1e293b; /* Match the background color of the body */
+      padding: 10px 15px; /* Add padding for better appearance */
+      border-radius: 5px; /* Add border-radius for rounded corners */
+      margin-bottom: 5px; /* Add margin to separate items */
+    }
+
+    .side-menu ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.25rem;
+      display: block; /* Make the link take the full width of the li */
+    }
+
+    .side-menu ul li a:hover {
+      background-color: #1e293b; /* Change background color on hover */
+      color: #06b6d4; /* Change text color on hover */
+    }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .hero-gradient {
@@ -137,37 +178,6 @@
         width: 100%;
         height: auto;
       }
-    }
-
-    /* Side menu styles */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 250px;
-      height: 100%;
-      background-color: #1e293b; /* Match the background color */
-      transition: right 0.3s ease;
-      z-index: 1000;
-      padding: 2rem 1rem;
-    }
-
-    .side-menu.open {
-      right: 0;
-    }
-
-    .side-menu ul {
-      list-style-type: none;
-    }
-
-    .side-menu ul li {
-      margin-bottom: 1rem;
-    }
-
-    .side-menu ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.25rem;
     }
   </style>
 </head>
